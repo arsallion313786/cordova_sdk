@@ -91,11 +91,22 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
+        <!-- Default Fallback in Info.plist -->
+                <config-file target="*-Info.plist" parent="NSUserTrackingUsageDescription">
+                    <string>We use your data to provide a personalized ad and content experience.</string>
+                </config-file>
+
+                <!-- Localisation files mapping -->
+                <resource-file src="Localisation/en.lproj/InfoPlist.strings" target="en.lproj/InfoPlist.strings" />
+                <resource-file src="Localisation/ar.lproj/InfoPlist.strings" target="ar.lproj/InfoPlist.strings" />
+      
 
         <header-file src="src/ios/AdjustCordova.h" />
         <source-file src="src/ios/AdjustCordova.m" />
         <header-file src="src/ios/AdjustCordovaDelegate.h" />
         <source-file src="src/ios/AdjustCordovaDelegate.m" />
+        
+        
 
         <podspec>
             <config>
