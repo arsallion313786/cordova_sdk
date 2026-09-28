@@ -104,8 +104,12 @@
                     </config-file>
 
                 <!-- Localisation files mapping -->
-                <resource-file src="Localisation/en.lproj/InfoPlist.strings" target="en.lproj/InfoPlist.strings" />
-                <resource-file src="Localisation/ar.lproj/InfoPlist.strings" target="ar.lproj/InfoPlist.strings" />
+<!--                <resource-file src="Localisation/en.lproj/InfoPlist.strings" target="en.lproj/InfoPlist.strings" />-->
+<!--                <resource-file src="Localisation/ar.lproj/InfoPlist.strings" target="ar.lproj/InfoPlist.strings" />-->
+                
+                
+                <!-- Hook to properly link files inside Xcode project bundle -->
+                        <hook type="after_prepare" src="scripts/add_localization.js" />
       
 
         <header-file src="src/ios/AdjustCordova.h" />
