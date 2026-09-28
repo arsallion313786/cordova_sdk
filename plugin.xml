@@ -95,6 +95,13 @@
                 <config-file target="*-Info.plist" parent="NSUserTrackingUsageDescription">
                     <string>We use your data to provide a personalized ad and content experience.</string>
                 </config-file>
+                
+                <config-file target="*-Info.plist" parent="CFBundleLocalizations">
+                        <array>
+                            <string>en</string>
+                            <string>ar</string>
+                        </array>
+                    </config-file>
 
                 <!-- Localisation files mapping -->
                 <resource-file src="Localisation/en.lproj/InfoPlist.strings" target="en.lproj/InfoPlist.strings" />
