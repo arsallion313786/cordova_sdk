@@ -91,25 +91,46 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        <!-- Default Fallback in Info.plist -->
+                
+                <!-- Default Fallback in Info.plist -->
                 <config-file target="*-Info.plist" parent="NSUserTrackingUsageDescription">
                     <string>We use your data to provide a personalized ad and content experience.</string>
                 </config-file>
-                
+
+                <config-file target="*-Info.plist" parent="CFBundleAllowMixedLocalizations">
+                    <true/>
+                </config-file>
+
                 <config-file target="*-Info.plist" parent="CFBundleLocalizations">
-                        <array>
-                            <string>en</string>
-                            <string>ar</string>
-                        </array>
-                    </config-file>
+                    <array>
+                        <string>en</string>
+                        <string>ar</string>
+                    </array>
+                </config-file>
+
+                <!-- Localisation files mapping for OutSystems MABS -->
+                <resource-file src="Localisation/en.lproj/InfoPlist.strings" target="Resources/en.lproj/InfoPlist.strings" />
+                <resource-file src="Localisation/ar.lproj/InfoPlist.strings" target="Resources/ar.lproj/InfoPlist.strings" />
+
+                <!-- REMOVE OR COMMENT OUT THIS HOOK -->
+                <!-- Hook to properly link files inside Xcode project bundle -->
+<!--                        <hook type="after_prepare" src="scripts/add_localization.js" />-->
+                
+                
+                
+<!--                <config-file target="*-Info.plist" parent="CFBundleLocalizations">-->
+<!--                        <array>-->
+<!--                            <string>en</string>-->
+<!--                            <string>ar</string>-->
+<!--                        </array>-->
+<!--                    </config-file>-->
 
                 <!-- Localisation files mapping -->
 <!--                <resource-file src="Localisation/en.lproj/InfoPlist.strings" target="en.lproj/InfoPlist.strings" />-->
 <!--                <resource-file src="Localisation/ar.lproj/InfoPlist.strings" target="ar.lproj/InfoPlist.strings" />-->
                 
                 
-                <!-- Hook to properly link files inside Xcode project bundle -->
-                        <hook type="after_prepare" src="scripts/add_localization.js" />
+                
       
 
         <header-file src="src/ios/AdjustCordova.h" />
